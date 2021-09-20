@@ -1,5 +1,6 @@
 const os = require("os")
-
+const log = require("./logger");
+const { stat } = require("fs");
 const { freemem, totalmem } = os;
 
 
@@ -11,11 +12,12 @@ setInterval(() => {
     console.clear();
     console.log(" --=== Memory Stats ===-- ");
     const stats = {
-        "free": `${mem} MB`,
-        "total": `${total} MB`,
-        "usage": `${percents}%`
+        "Free": `${mem} MB`,
+        "Total": `${total} MB`,
+        "Usage": `${percents}%`
     };
 
     console.table(stats);
-
+    log(`${JSON.stringify(stats)}\n`)
+    console.log("Rodando....")
 }, 1000)
