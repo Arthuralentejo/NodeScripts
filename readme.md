@@ -1,3 +1,4 @@
-# Server NodeJS
+# Script repository for learning purpose
 
-### Exercitando conceitos NodeJS
+	* Memory_Logger
+	* Server_HTTP
